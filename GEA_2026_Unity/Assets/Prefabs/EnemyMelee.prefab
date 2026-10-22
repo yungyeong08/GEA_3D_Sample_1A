@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3626589266430404293}
   m_Layer: 0
   m_Name: EnemyMelee
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,6 +129,10 @@ MonoBehaviour:
   maxHp: 3
   currentHp: 0
   hpSlider: {fileID: 0}
+  invincibleTime: 0
+  dropPrefab: {fileID: 6551575822629158448, guid: 54e2d02dbc7ba7c4e9d1119c75d8a737, type: 3}
+  dropChance: 0.3
+  hitEffect: {fileID: 7548498665276663565, guid: 48381761eb4ae8c469c05545b77d83b8, type: 3}
 --- !u!114 &3626589266430404293
 MonoBehaviour:
   m_ObjectHideFlags: 0
