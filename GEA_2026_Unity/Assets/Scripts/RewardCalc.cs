@@ -2,23 +2,42 @@ using UnityEngine;
 
 public class RewardCalc : MonoBehaviour
 {
-    public int PlayerSeconds = 3725;
-    public int Gold = 1234;
-    public int Members = 4;
-    public int Kills = 7;
-    public int ExpPerKill = 35;
+    public int playSeconds = 3725;
+    public int gold = 1234;
+    public int members = 4;
+    public int kills = 7;
+    public int expPerKill = 35;
+    public int totalDamage = 250;
+    public int hits = 20;
 
-    public int TotelDamage = 250;
-    public int Hits = 20;
-    public float ExpRate = 1.5f;
+    public float expRate = 1.5f;
+
     [ContextMenu("정산")]
     void Settle()
     {
-        int goldMembers = Gold / Members;
-        int readerBonus = Gold % Members;
-        Debug.Log("골드 분배: " + goldMembers + "리더 보너스: " + readerBonus);
+        int hour = playSeconds / 3600;
+        int min = (playSeconds % 3600) / 60;
+        int sec = playSeconds % 60;
 
-        
+        Debug.Log(hour + "시간 " + min + "분 " + sec + "초");
+
+        int goldPerPerson = gold / members;
+        int leaderBonus = gold % members;
+
+        Debug.Log("1인당 " + goldPerPerson + "G, 리더 보너스 " + leaderBonus + "G");
+
+        int baseExp = kills * expPerKill;
+        int finalExp = (int)(baseExp * expRate);
+
+        Debug.Log("경험치 " + finalExp + " (기본 " + baseExp + ")");
+
+        int level = finalExp / 100 + 1;
+        int nextExp = 100 - (finalExp % 100);
+
+        Debug.Log("Lv " + level + ", 다음 레벨까지 " + nextExp);
+
+        float averageDamage = (float)totalDamage / hits;
+
+        Debug.Log("평균 데미지 " + averageDamage);
     }
-   
 }
