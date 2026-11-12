@@ -396,6 +396,7 @@ GameObject:
   - component: {fileID: 1997481018}
   - component: {fileID: 1997481020}
   - component: {fileID: 1997481019}
+  - component: {fileID: 1997481021}
   m_Layer: 0
   m_Name: Tester
   m_TagString: Untagged
@@ -461,14 +462,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 610af5d12c346cd4195b49c45a9b27c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RewardCalc
-  PlayerSeconds: 3725
-  Gold: 1234
-  Members: 4
-  Kills: 7
-  ExpPerKill: 35
-  TotelDamage: 250
-  Hits: 20
-  ExpRate: 1.5
+  playSeconds: 3725
+  gold: 1234
+  members: 4
+  kills: 7
+  expPerKill: 35
+  totalDamage: 250
+  hits: 20
+  expRate: 1.5
 --- !u!114 &1997481020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -483,6 +484,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::HpPractice
   currentHp: 10
   maxHp: 20
+--- !u!114 &1997481021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1997481015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11b79e028bc070d48a6291d4f3a4e508, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Lesson10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
